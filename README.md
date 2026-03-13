@@ -198,7 +198,3 @@ Tested and working on:
 This is a cloned demo site. Please respect the original creator's intellectual property rights and customize appropriately for your use case.
 
 ---
-
-**Created:** February 20, 2026  
-**Original Source:** https://theatre-demo.thedigitalyes.com/  
-**Cloned By:** Automated process with user permission
