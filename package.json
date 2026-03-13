@@ -1,0 +1,16 @@
+{
+  "name": "theatre-demo-clone",
+  "version": "1.0.0",
+  "description": "Static clone of Theatre Demo wedding website",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "serve": "npx http-server -p 8000"
+  },
+  "keywords": [
+    "wedding",
+    "static-site",
+    "clone"
+  ],
+  "author": "",
+  "license": "ISC"
+}

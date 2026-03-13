@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Set the document title to the name of your application -->
+    <title>Saanmu & Abinaya Wedding</title>
+    <meta
+      name="description"
+      content="Join us to celebrate the wedding of Saanmu & Abinaya"
+    />
+    <meta name="author" content="Lovable" />
+
+    <!-- TODO: Update og:title to match your application name -->
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://storage.googleapis.com/gpt-engineer-file-uploads/yvpVAe8g7zbtmSBZ4wwdPwZJL6p1/social-images/social-1767363163378-ChatGPT Image 28 dic 2025, 18_56_56.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta
+      name="twitter:image"
+      content="https://storage.googleapis.com/gpt-engineer-file-uploads/yvpVAe8g7zbtmSBZ4wwdPwZJL6p1/social-images/social-1767363163378-ChatGPT Image 28 dic 2025, 18_56_56.png"
+    />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <meta property="og:title" content="Saanmu & Abinaya Wedding" />
+    <meta name="twitter:title" content="Saanmu & Abinaya Wedding" />
+    <meta
+      property="og:description"
+      content="Join us to celebrate the wedding of Saanmu & Abinaya"
+    />
+    <meta
+      name="twitter:description"
+      content="Join us to celebrate the wedding of Saanmu & Abinaya"
+    />
+    <script type="module" crossorigin src="/assets/index-BBIwAgSn.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-bYuRLTYZ.css" />
+    <link rel="stylesheet" href="/custom.css" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      // Wait for React to render, then customize the page
+      setTimeout(function () {
+        // Hide sections with specific text content
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          const text = section.textContent;
+          console.log("Checking section with text:", text);
+          if (
+            text.includes("Dress Code") ||
+            text.includes("Gifts") ||
+            text.includes("WEDDING REGISTRY") ||
+            text.includes("Confirm your attendance") ||
+            text.includes("Transport") ||
+            text.includes("ENIT") ||
+            text.includes("Buy now") ||
+            text.includes("TEATRO DEMO") ||
+            text.includes("antipasti")
+          ) {
+            section.style.display = "none";
+          }
+        });
+
+        // Hide The Digital Yes branding
+        const brandingLinks = document.querySelectorAll(
+          'a[href*="thedigitalyes"]',
+        );
+        brandingLinks.forEach((link) => {
+          const parent = link.closest("div");
+          if (parent) parent.style.display = "none";
+        });
+
+        // Hide the extra badge
+        document.querySelectorAll(".absolute").forEach((el) => {
+          if (
+            el.textContent.includes("Extra:") ||
+            el.textContent.includes("custom illustration")
+          ) {
+            el.style.display = "none";
+          }
+        });
+
+        // Add map link after venue address
+        const venueSection = Array.from(sections).find((s) =>
+          s.textContent.includes("Narayanasamy Gounder Thirumana Mandapam"),
+        );
+
+        if (venueSection) {
+          const addressDivs = venueSection.querySelectorAll("div");
+          addressDivs.forEach((div) => {
+            if (div.textContent.includes("Tamil Nadu")) {
+              const mapLink = document.createElement("a");
+              mapLink.href = "https://share.google/PFaN4y0ZktKWLIwBC";
+              mapLink.target = "_blank";
+              mapLink.rel = "noopener noreferrer";
+              mapLink.className = "venue-map-link";
+              mapLink.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                View on Google Maps
+              `;
+
+              // Insert after the address
+              const parent = div.closest('div[class*="text-center"]');
+              if (parent && parent.parentNode) {
+                const wrapper = document.createElement("div");
+                wrapper.className = "text-center mt-6";
+                wrapper.appendChild(mapLink);
+                parent.parentNode.insertBefore(wrapper, parent.nextSibling);
+              }
+            }
+          });
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
