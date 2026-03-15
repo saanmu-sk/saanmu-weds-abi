@@ -25888,7 +25888,7 @@ const k$ = ({ onComplete: e, onFirstClick: t }) => {
           whileInView: { opacity: 1, y: 0 },
           transition: { duration: 0.8, ease: "easeOut", delay: 0.6 },
           viewport: { once: !0 },
-          className: "text-center mb-10",
+          className: "text-center mb-10 mt-10",
           children: f.jsx("p", {
             className: "font-display text-2xl md:text-3xl tracking-wide",
             style: { color: "#5C2018" },
