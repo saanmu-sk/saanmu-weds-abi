@@ -53,17 +53,7 @@
         sections.forEach((section) => {
           const text = section.textContent;
           console.log("Checking section with text:", text);
-          if (
-            text.includes("Dress Code") ||
-            text.includes("Gifts") ||
-            text.includes("WEDDING REGISTRY") ||
-            text.includes("Confirm your attendance") ||
-            text.includes("Transport") ||
-            text.includes("ENIT") ||
-            text.includes("Buy now") ||
-            text.includes("TEATRO DEMO") ||
-            text.includes("antipasti")
-          ) {
+          if (text.includes("Buy now") || text.includes("TEATRO DEMO")) {
             section.style.display = "none";
           }
         });
